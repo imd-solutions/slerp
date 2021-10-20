@@ -1,0 +1,7 @@
+#Query all the merchant.
+#import "../../fragments/merchantDetails.gql"
+query getMerchant($slug: String) {
+  merchants(where: {slug: {_eq: $slug}})  {
+    ...merchantDetails
+  }
+}

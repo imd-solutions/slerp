@@ -1,0 +1,15 @@
+# Fragment for the merchant type.
+fragment merchantDetails on merchants {
+    id
+    name
+    slug
+    stores {
+      id
+      is_open
+      email
+      is_warehouse
+      slug
+      operating_schedules
+      special_schedules
+    }
+}

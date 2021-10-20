@@ -1,0 +1,19 @@
+#Query all the products.
+#import "../../fragments/productDetails.gql"
+query getProductsPerMerchant($slug: String) {
+    merchants(where: {slug: {_eq: $slug}}) {
+        products {
+            product_id: id
+            name
+            slug
+            category {
+                name
+            }
+            default_variant: product_variants(where: {
+                default_variant: {_eq: true}
+            }) {
+                ...productDetails
+            }
+        }
+    }
+}

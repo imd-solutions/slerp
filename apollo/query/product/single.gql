@@ -1,0 +1,24 @@
+# Query all the products.
+query getProductsPerMerchant($merchantSlug: String) {
+    merchants(where: {slug: {_eq: $merchantSlug}}) {
+        name
+        slug
+        products {
+            product_id: id
+            name
+            slug
+            category {
+                name
+            }
+            default_variant: product_variants(where: {
+                default_variant: {_eq: true}
+            }) {
+                name
+                id
+                description
+                image
+                price
+            }
+        }
+    }
+}

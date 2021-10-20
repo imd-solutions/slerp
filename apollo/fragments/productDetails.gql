@@ -1,0 +1,8 @@
+# Fragment for the product type.
+fragment productDetails on product_variants {
+    name
+    id
+    description
+    image
+    price
+}

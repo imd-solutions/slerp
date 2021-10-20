@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "noImplicitThis": false,
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "#/*": ["./*"],
+      "@/plugins/*": ["./plugins/*"],
+      "@/includes/*": ["./includes/*"],
+      "@/mainStore/*": ["./store/*"],
+      "@/store/*": ["./store/modules/*"],
+      "@/mutations/*": ["./apollo/mutations/*"],
+      "@/queries/*": ["./apollo/queries/*"],
+      "@/mixins/*": ["./mixins/*"],
+      "@/partials/*": ["./partials"],
+      "@/utils/*": ["./utils/*"],
+      "@/assets/*": ["./assets/*"]
+    },
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@nuxt/vue-app",
+      "@types/webpack-env",
+      "jest",
+      "@types/jquery",
+      "cypress"
+    ]
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}
