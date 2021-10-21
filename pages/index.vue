@@ -14,8 +14,8 @@ import {Vue, Component} from "nuxt-property-decorator";
 import PageLoader from "@/components/PageLoader.vue";
 import MerchantInfo from "@/components/MerchantInfo.vue";
 import ProductList from "@/components/ProductList.vue";
-import {Merchant} from "@/store/merchant/types";
-import {Product} from "@/store/products/types";
+import Merchant from "@/store/merchant/types.ts";
+import Product from "@/store/products/types.ts";
 import {
   merchantStore,
   productStore,
@@ -45,8 +45,8 @@ import {
 export default class HomePage extends Vue {
   public loading: boolean = true;
   public slug: string = "boccadilupo";
-  public merchant: Merchant = [];
-  public products: Product = [];
+  public merchant: typeof Merchant = [];
+  public products: typeof Product = [];
 
   async beforeMount() {
     await merchantStore.queryMerchant(this.slug).then((merchant) => {

@@ -9,7 +9,7 @@ const GRAPHQL_URL = process.env.GRAPHQL_URL;
 export default {
     debug: true,
     middleware({redirect}) {
-        // Redirect to the login page.
+        // Redirect to the login page if.
         return redirect("/login");
     },
     render: {
@@ -31,7 +31,16 @@ export default {
             {
                 rel: "stylesheet",
                 href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            }],
+            },
+            {
+                rel: "stylesheet",
+                href: "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+            },
+            {
+                rel: "stylesheet",
+                href: "https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css"
+            }
+        ],
         script: [],
     },
 

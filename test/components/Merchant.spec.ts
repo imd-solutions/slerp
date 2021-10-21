@@ -1,5 +1,5 @@
 import { mount, shallowMount } from '@vue/test-utils'
-import MerchantComponent from '@/components/Merchant.vue'
+import MerchantComponent from '@/components/MerchantInfo.vue'
 import Merchant from '@/store/merchant/types.ts';
 
 describe('Merchant.vue', () => {

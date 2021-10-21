@@ -4,9 +4,9 @@
     "noImplicitAny": false,
     "resolveJsonModule": true,
     "noImplicitThis": false,
-    "target": "ES2018",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
     "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
     "esModuleInterop": true,
     "allowJs": true,
@@ -36,7 +36,10 @@
       "@types/webpack-env",
       "jest",
       "@types/jquery",
-      "cypress"
+      "cypress",
+      "node",
+      "@/store/merchant/types",
+      "@/store/products/types"
     ]
   },
   "include": [
